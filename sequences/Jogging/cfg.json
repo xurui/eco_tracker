@@ -1,0 +1,52 @@
+{
+	"useDeepFeature": false,
+	"useHogFeature": true,
+
+    "HogParam": {"cell_size": 6,
+        "compressed_dim": 10,
+        "nOrients": 9,
+        "nDim": 31
+    },
+
+    "CNNParam": {"proto": "model/imagenet-vgg-m-2048.prototxt",
+        "model": "model/VGG_CNN_M_2048.caffemodel",
+        "mean_file": "model/VGG_mean.binaryproto",
+        "ncnn_param": "model/imagenet-vgg-m-2048.param",
+        "ncnn_bin": "model/VGG_CNN_M_2048.bin"
+    },
+
+	"max_score_threshhold": 0.1,
+
+	"search_area_scale": 4.0,
+	"min_image_sample_size": 22500,
+	"max_image_sample_size": 40000,
+
+	"newton_iterations": 5,
+
+	"output_sigma_factor": 0.0625,
+	"learning_rate": 0.009,
+	"nSamples": 30,
+    "train_gap": 5,
+
+	"projection_reg": 1e-7,
+
+	"CG_iter": 5,
+	"init_CG_iter": 150,
+    "init_GN_iter": 10,
+    "CG_use_FR": false,
+    "CG_standard_alpha": true,
+    "CG_forgetting_rate": 50,
+    "precond_data_param": 0.75,
+    "precond_reg_param": 0.25,
+    "precond_proj_param": 40,
+
+    "use_reg_window": true,
+    "reg_window_min": 1e-4,
+    "reg_window_edge": 1e-2,
+    "reg_window_power": 2,
+    "reg_sparsity_threshold": 0.05,
+
+    "interpolation_bicubic_a": -0.75,
+    "number_of_scales": 7,
+    "scale_step": 1.01
+}
