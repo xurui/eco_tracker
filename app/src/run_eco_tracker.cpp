@@ -86,15 +86,7 @@ int main(int argc, char **argv) {
         std::cout << "--bboxGroundtruth x: " << bboxGroundtruth.x << " y:" << bboxGroundtruth.y
         << " width: " << bboxGroundtruth.width << " height: " << bboxGroundtruth.height << std::endl;
         std::cout << "--ecobbox x: " << ecobbox.x << " y:" << ecobbox.y
-        << " width: " << ecobbox.width << " height: " << ecobbox.height << std::endl;        
-        // int c = cvWaitKey();
-        // if (c != -1)
-        //     c = c % 256;
-        // if (c == 27)
-        // {
-        //     cvDestroyWindow("EcoTracker");
-        //     return 0;
-        // }
+        << " width: " << ecobbox.width << " height: " << ecobbox.height << std::endl;
         waitKey(5);
         f++;
         readGroundTruthFromFile(groundtruth, bboxGroundtruth);
