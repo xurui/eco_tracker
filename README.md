@@ -17,7 +17,7 @@ run ./eco_tracker
 
 ## Some tips:
 1. It uses fHoG feature to build feature map default, but you can extend to use CNN feature via setting USE_CNN;
-2. About Deep features, this project supports extracting by Caffe and extracting by NCNN, the latter is suitable for ARM platform. For more info about NCNN, you can visit [NCNN](https://github.com/Tencent/ncnn);
+2. About Deep features, this project supports extracting by Caffe and NCNN, the latter is suitable for ARM platform. For more info about NCNN, you can visit [NCNN](https://github.com/Tencent/ncnn);
 3. Extracting Color Names features will be added in recently.
 
 # Reference
