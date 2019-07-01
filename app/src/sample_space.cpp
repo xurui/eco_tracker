@@ -36,7 +36,6 @@ void SampleSpace::updateSampleSpaceModel(const EcoFeats& new_sample) {
 
     Eigen::VectorXcf gram_vec(sample_num_, 1);
     for (int n = 0; n < sample_num_; ++n) {
-        // because of compact fourier coeff process
         // 2(ac + bd)
         gram_vec[n] = 2.f * EcoFeatInnerProduct(new_sample, target_samples_.at(n));
     }
@@ -126,8 +125,6 @@ void SampleSpace::updateSampleSpaceModel(const EcoFeats& new_sample) {
                 target_samples_[merged_sample_id_] = merged_sample;
 			} else {
 				// we merge the nearest existing samples and insert the new sample in the vacated position
-
-				// renormalize prior weights
 				for (size_t i = 0; i < init_weights_[i]; i++)
 					init_weights_[i] *= (1 - learning_rate_);
 

@@ -43,14 +43,6 @@ EcoFeats extractor(const cv::Mat image,
 		img_sample_sz.push_back(hog_features.img_sample_sz);
 		img_input_sz.push_back(hog_features.img_input_sz);
 	}
-	// if (params.useCnFeature && is_color_image)
-	// {
-	// 	cn_feat_ind_ = num_features;
-	// 	num_features++;
-	// 	cn_features_ = params.cn_features;
-	// 	img_sample_sz.push_back(cn_features_.img_sample_sz);
-	// 	img_input_sz.push_back(cn_features_.img_input_sz);
-	// }
 	// Extract images
 	std::vector<std::vector<cv::Mat> > img_samples;
 	for (int i = 0; i < num_features; ++i) {
@@ -80,11 +72,6 @@ EcoFeats extractor(const cv::Mat image,
         std::vector<Eigen::MatrixXcf> feat_maps = transferMat2Matrix(hog_feat_maps);
 		sum_features.push_back(feat_maps);
 	}
-	// if (params.useCnFeature && is_color_image) {
-	// 	cn_feat_maps_ = get_cn_features(img_samples[cn_feat_ind_]);
-	// 	cn_feat_maps_ = cn_feature_normalization(cn_feat_maps_);
-	// 	sum_features.push_back(cn_feat_maps_);
-	// }
 	return sum_features;
 }
 
