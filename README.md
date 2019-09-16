@@ -1,3 +1,6 @@
+[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+
 # eco_tracker
 
 This is a C++ reimplementation of algorithm presented in "ECO Efficient Convolution Operators for Tracking" paper. For more info and implementation in Matlab visit [ECO tracker](https://github.com/martin-danelljan/ECO).
